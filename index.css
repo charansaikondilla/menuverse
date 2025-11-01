@@ -1,0 +1,15 @@
+/* Minimal site CSS — left intentionally small because Tailwind is loaded via CDN. */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Small utility to ensure body background follows the theme classes */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* If you later compile Tailwind locally, you can replace this with Tailwind directives */
+/* @tailwind base; @tailwind components; @tailwind utilities; */
