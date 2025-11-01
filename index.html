@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MenuVerse - Your Smart Digital Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Orbitron', 'sans-serif'],
+          },
+          colors: {
+            'dark-bg': '#0D0C14',
+            'light-bg': '#F5F6FA',
+            'dark-card': 'rgba(23, 22, 32, 0.5)',
+            'light-card': 'rgba(255, 255, 255, 0.5)',
+            'electric-violet': '#8A2BE2',
+            'cyber-teal': '#00F5D4',
+            'dark-text': '#EAE8FF',
+            'light-text': '#171620',
+            'dark-subtle': '#A09FB3',
+            'light-subtle': '#5B596A',
+          },
+          boxShadow: {
+             'glow-violet': '0 0 20px 0 rgba(138, 43, 226, 0.5)',
+             'glow-teal': '0 0 20px 0 rgba(0, 245, 212, 0.5)',
+          },
+          animation: {
+            'aurora': 'aurora 60s linear infinite',
+            'aurora-bg': 'aurora-bg 20s ease-in-out infinite alternate',
+            'fan-out': 'fan-out 1s ease-out forwards',
+          },
+          keyframes: {
+            aurora: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' },
+            },
+            'aurora-bg': {
+              '0%': { transform: 'translate(20%, -20%) rotate(0deg) scale(1)' },
+              '100%': { transform: 'translate(-20%, 20%) rotate(30deg) scale(1.2)' },
+            },
+            'fan-out': {
+                '0%': { transform: 'translateY(100px) rotate(0deg)', opacity: 0 },
+                '100%': { transform: 'translateY(0) rotate(var(--end-rotate, 0deg))', opacity: 1 },
+            }
+          },
+        },
+      },
+    }
+  </script>
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://aistudiocdn.com/react@^19.2.0",
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+      "react/": "https://aistudiocdn.com/react@^19.2.0/"
+    }
+  }
+  </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
